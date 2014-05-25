@@ -7,7 +7,7 @@ Il progetto nasce per fornire uno strumento che permetta al cittadino di compren
 Per realizzare questo vengono classificati articoli di giornali online e i dibattiti associati alle Proposte di legge che sono poi diventate legge.
 Il materiale raccolto é poi consultabile attraverso un sito web.
 
-DEMO: 
+DEMO: http://camera-fej.rhcloud.com
 
 PRESENTAZIONE DEL PROGETTO : https://www.slideshare.net/jesty/di-cosa-parlano
 
