@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uri: MyText
+  name: MyString
+  surname: MyString
+  birthday: 2014-05-22 02:00:58
+  birthcountry: MyText
+  electionday: 2014-05-22 02:00:58
+  board: MyString
+  gender: MyString
+  description: MyString
+
+two:
+  uri: MyText
+  name: MyString
+  surname: MyString
+  birthday: 2014-05-22 02:00:58
+  birthcountry: MyText
+  electionday: 2014-05-22 02:00:58
+  board: MyString
+  gender: MyString
+  description: MyString

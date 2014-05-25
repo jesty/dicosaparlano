@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uri: MyText
+  date: 2014-05-22 02:01:05
+  title: MyText
+  body: MyText
+  meta_title: MyText
+  meta_desc: MyText
+  meta_keywords: MyText
+
+two:
+  uri: MyText
+  date: 2014-05-22 02:01:05
+  title: MyText
+  body: MyText
+  meta_title: MyText
+  meta_desc: MyText
+  meta_keywords: MyText

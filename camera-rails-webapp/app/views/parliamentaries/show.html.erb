@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uri:</strong>
+  <%= @parliamentary.uri %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @parliamentary.name %>
+</p>
+
+<p>
+  <strong>Surname:</strong>
+  <%= @parliamentary.surname %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @parliamentary.birthday %>
+</p>
+
+<p>
+  <strong>Birthcountry:</strong>
+  <%= @parliamentary.birthcountry %>
+</p>
+
+<p>
+  <strong>Electionday:</strong>
+  <%= @parliamentary.electionday %>
+</p>
+
+<p>
+  <strong>Board:</strong>
+  <%= @parliamentary.board %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @parliamentary.gender %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @parliamentary.description %>
+</p>
+
+<%= link_to 'Edit', edit_parliamentary_path(@parliamentary) %> |
+<%= link_to 'Back', parliamentaries_path %>

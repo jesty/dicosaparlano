@@ -1,0 +1,47 @@
+
+{
+    "id": 29,
+    "uri": "http://dati.camera.it/ocd/persona.rdf/p305008",
+    "name": "RENATO",
+    "surname": "BALDUZZI",
+    "birthday": null,
+    "birthcountry": null,
+    "electionday": "2013-02-24T00:00:00.000Z",
+    "board": "PIEMONTE 2",
+    "gender": "male",
+    "description": "Laurea magistrale in giurisprudenza; Professore ordinario di diritto costituzionale nell'Università Cattolica, Presidente nazionale del MEIC (Movimento ecclesiale di impegno culturale, 2002-2009), Ministro della Salute nel Governo Monti",
+    "created_at": "2014-05-24T15:18:08.000Z",
+    "updated_at": "2014-05-24T15:18:08.000Z",
+    "categories": [{
+            "id": 1,
+            "name": "Giustizia, Criminalità - Giustizia",
+            "parent": null,
+            "url": "http://camera-fej.rhcloud.com/categories/1.json"
+        }, {
+            "id": 2,
+            "name": "Politica - Parlamento",
+            "parent": null,
+            "url": "http://camera-fej.rhcloud.com/categories/2.json"
+        }, {
+            "id": 3,
+            "name": "Sociale - Ricostruzione",
+            "parent": null,
+            "url": "http://camera-fej.rhcloud.com/categories/3.json"
+        }],
+    "documents": [{
+            "id": 3,
+            "uri": "http://news.centrodiascolto.it/video/tg2/2014-05-20/politica/rai-fico-chiede-di-cambiare",
+            "title": "Video | Rai: Fico chiede di cambiare. | news.centrodiascolto.it",
+            "body": "chiede alla RAI di cambiare il Presidente della Commissione parlamentare di vigilanza Roberto fico del Movimento cinque Stelle fico ò contesta la",
+            "url": "http://camera-fej.rhcloud.com/documents/3.json",
+            "image":"http://s3.buysellads.com/1239288/222871-1400329925.jpg"
+        }],
+    "acts": [{
+            "id": 1,
+            "uri": "http://documenti.camera.it/apps/commonServices/getDocumento.ashx?sezione=bollettini\u0026tipoDoc=comunicato\u0026idlegislatura=17\u0026anno=2013\u0026mese=08\u0026giorno=08\u0026idcommissione=48\u0026pagina=data.20130808.com48.bollettino.sede00010.tit00010\u0026ancora=data.20130808.com48.bollettino.sede00010.tit00010",
+            "title": "Atto numero 1",
+            "body": "Testo dell'atto parlamentare 1",
+            "url": "http://camera-fej.rhcloud.com/acts/1.json",
+            "image": "http://s3.buysellads.com/1239288/222871-1400329925.jpg"
+        }]
+}

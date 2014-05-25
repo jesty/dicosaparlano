@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uri:</strong>
+  <%= @act.uri %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @act.date %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @act.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @act.body %>
+</p>
+
+<%= link_to 'Edit', edit_act_path(@act) %> |
+<%= link_to 'Back', acts_path %>

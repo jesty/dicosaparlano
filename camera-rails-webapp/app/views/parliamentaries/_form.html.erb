@@ -1,0 +1,53 @@
+<%= form_for(@parliamentary) do |f| %>
+  <% if @parliamentary.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@parliamentary.errors.count, "error") %> prohibited this parliamentary from being saved:</h2>
+
+      <ul>
+      <% @parliamentary.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :uri %><br>
+    <%= f.text_area :uri %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :surname %><br>
+    <%= f.text_field :surname %>
+  </div>
+  <div class="field">
+    <%= f.label :birthday %><br>
+    <%= f.datetime_select :birthday %>
+  </div>
+  <div class="field">
+    <%= f.label :birthcountry %><br>
+    <%= f.text_area :birthcountry %>
+  </div>
+  <div class="field">
+    <%= f.label :electionday %><br>
+    <%= f.datetime_select :electionday %>
+  </div>
+  <div class="field">
+    <%= f.label :board %><br>
+    <%= f.text_field :board %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

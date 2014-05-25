@@ -1,0 +1,80 @@
+URL REMOTA: http://camera-fej.rhcloud.com
+
+
+Esempio di CURL che invoca un servizio ed invia tramite metodo POST un JSON
+#> curl -X POST -H "Content-Type: application/json" -d '{"username":"xyz","password":"xyz"}' http://localhost:3000/api/login
+#> curl -X POST -H "Content-Type: application/json" -d @nome_file.json http://localhost:3000/api/login
+
+# Con scrittura e lettura del file dei cookies
+#> curl -c cookies.txt -b cookies.txt -X POST -H "Content-Type: application/json" -d @nome_file.json http://localhost:3000/api/login
+
+
+# Esempio delle chiamate per il progetto: Camera
+# Crea una singola categoria, il json deve essere {"category": {"name": "sport"}}
+#> curl -c cookies.txt -b cookies.txt -X POST -H "Content-Type: application/json" -d '{"category": {"name": "sport"}}' http://localhost:3000/categories.json
+#> curl -c cookies.txt -b cookies.txt -X POST -H "Content-Type: application/json" -d @category.json http://localhost:3000/categories.json
+
+
+# Crea più categorie, il json deve essere [["sport", ""], ["politica", ""], ["ambiente", ""]]
+# METHOD: POST
+# URL: http://localhost:3000/categories.json
+#> curl -c cookies.txt -b cookies.txt -X POST -H "Content-Type: application/json" -d '[["sport", ""], ["politica", ""], ["ambiente", ""]]' http://localhost:3000/categories.json
+#> curl -c cookies.txt -b cookies.txt -X POST -H "Content-Type: application/json" -d @category.json http://localhost:3000/categories.json
+
+# Elenco di tutte le categorie
+# METHOD: GET
+# URL: http://localhost:3000/categories.json
+#> curl -c cookies.txt -b cookies.txt -X GET -H "Content-Type: application/json" http://localhost:3000/categories.json
+
+# Crea più parlamentari, il json deve essere
+# [[:uri, :name, :surname, :birthday, :birthcountry, :electionday, :board, :gender, :description],[]]
+# METHOD: POST
+# URL: http://localhost:3000/parliamentaries/import.json
+#> curl -c cookies.txt -b cookies.txt -X POST -H "Content-Type: application/json" -d '[["http://blablabla1", "nome", "cognome", "19810304", "Roma", "20131101", "Lazio", "male", "bla bla bla desc"], ["http://blablabla2", "nome due", "cognome due", "19210304", "Benevento", "20131101", "Lazio", "male", "bla bla bla desc"], ["http://blablabla3", "nome tre", "cognome tre", "19780304", "Caserta", "20131101", "Lazio", "male", "bla bla bla desc"]]' http://localhost:3000/parliamentaries/import.json
+
+# Elenco di tutti parlamentari
+# METHOD: GET
+# URL: http://localhost:3000/parliamentaries.json
+#> curl -c cookies.txt -b cookies.txt -X GET -H "Content-Type: application/json" http://localhost:3000/parliamentaries.json
+
+# Crea più documenti, il json deve essere
+# [[:uri, :date, :title, :body, :meta_title, :meta_desc, :meta_keywords],[]]
+# METHOD: POST
+# URL: http://localhost:3000/documents/import.json
+#> curl -c cookies.txt -b cookies.txt -X POST -H "Content-Type: application/json" -d '[["http://blablabla1", "nome", "cognome", "19810304", "Roma", "20131101", "Lazio", "male", "bla bla bla desc"], ["http://blablabla2", "nome due", "cognome due", "19210304", "Benevento", "20131101", "Lazio", "male", "bla bla bla desc"], ["http://blablabla3", "nome tre", "cognome tre", "19780304", "Caserta", "20131101", "Lazio", "male", "bla bla bla desc"]]' http://localhost:3000/documents/import.json
+
+
+# Crea più documenti, il json può contenute gli oggetti categorie e parlamentari come nell'esempio sotto.
+# METHOD: POST
+# URL: http://localhost:3000/documents/cimport.json
+#> curl -c cookies.txt -b cookies.txt -X POST -H "Content-Type: application/json" -d @documents.json http://localhost:3000/documents/cimport.json
+[{"id":null,"title":"Online i redditi dei ministri, Renzi e Padoan guadagnano meno - Repubblica.it","description":"La classifica/ prendono la met&agrave; del tetto imposto ai supermanage.&nbsp;Nel 2012 da sindaco di Firenze aveva dichiarato 145mila euro","image":"http://cdn.download.repubblica.it/cless/main/nazionale/2013-v1/img/common/favicon/favicon-1500.png","uri":"http://www.repubblica.it/politica/2014/05/22/news/guadagni-86831697/","categories":[{"categoria":"Giustizia, Criminalità"},{"categoria":"Politica - Migrazioni"},{"categoria":"Politica - Partiti, Movimenti"},{"categoria":"Politica - Politica (generico)"},{"categoria":"Scienza, Tecnologia"},{"categoria":"Sociale"}],"date":null,"parlamentari":[{"id":"http://dati.camera.it/ocd/persona.rdf/p302128","nome":" SANDRO GOZI ","cognome":" GOZI SANDRO ","genere":null,"categories":null,"dataDiNascita":null,"titoloDiStudio":null,"collegio":null,"dataElezione":null,"documenti":null},{"id":"http://dati.camera.it/ocd/persona.rdf/p306160","nome":" MARIA ELENA BOSCHI ","cognome":" BOSCHI MARIA ELENA ","genere":null,"categories":null,"dataDiNascita":null,"titoloDiStudio":null,"collegio":null,"dataElezione":null,"documenti":null}]}]
+
+# Elenco di tutti i documenti
+# METHOD: GET
+# URL: http://localhost:3000/documents.json
+#> curl -c cookies.txt -b cookies.txt -X GET -H "Content-Type: application/json" http://localhost:3000/documents.json
+
+# Crea più atti (leggi), il json deve essere
+# [[:uri, :date, :title, :body],[]]
+# METHOD: POST
+# URL: http://localhost:3000/acts/import.json
+#> curl -c cookies.txt -b cookies.txt -X POST -H "Content-Type: application/json" -d '[["http://blablabla1", "nome", "cognome", "19810304", "Roma", "20131101", "Lazio", "male", "bla bla bla desc"], ["http://blablabla2", "nome due", "cognome due", "19210304", "Benevento", "20131101", "Lazio", "male", "bla bla bla desc"], ["http://blablabla3", "nome tre", "cognome tre", "19780304", "Caserta", "20131101", "Lazio", "male", "bla bla bla desc"]]' http://localhost:3000/acts/import.json
+
+# Crea più ATTI, il json può contenute gli oggetti categorie e parlamentari come nell'esempio sotto.
+# METHOD: POST
+# URL: http://localhost:3000/acts/cimport.json
+#> curl -c cookies.txt -b cookies.txt -X POST -H "Content-Type: application/json" -d @documents.json http://localhost:3000/acts/cimport.json
+[{"id":null,"title":"Online i redditi dei ministri, Renzi e Padoan guadagnano meno - Repubblica.it","description":"La classifica/ prendono la met&agrave; del tetto imposto ai supermanage.&nbsp;Nel 2012 da sindaco di Firenze aveva dichiarato 145mila euro","image":"http://cdn.download.repubblica.it/cless/main/nazionale/2013-v1/img/common/favicon/favicon-1500.png","uri":"http://www.repubblica.it/politica/2014/05/22/news/guadagni-86831697/","categories":[{"categoria":"Giustizia, Criminalità"},{"categoria":"Politica - Migrazioni"},{"categoria":"Politica - Partiti, Movimenti"},{"categoria":"Politica - Politica (generico)"},{"categoria":"Scienza, Tecnologia"},{"categoria":"Sociale"}],"date":null,"parlamentari":[{"id":"http://dati.camera.it/ocd/persona.rdf/p302128","nome":" SANDRO GOZI ","cognome":" GOZI SANDRO ","genere":null,"categories":null,"dataDiNascita":null,"titoloDiStudio":null,"collegio":null,"dataElezione":null,"documenti":null},{"id":"http://dati.camera.it/ocd/persona.rdf/p306160","nome":" MARIA ELENA BOSCHI ","cognome":" BOSCHI MARIA ELENA ","genere":null,"categories":null,"dataDiNascita":null,"titoloDiStudio":null,"collegio":null,"dataElezione":null,"documenti":null}]}]
+
+# Elenco di tutti gli atti
+# METHOD: GET
+# URL: http://localhost:3000/acts.json
+#> curl -c cookies.txt -b cookies.txt -X GET -H "Content-Type: application/json" http://localhost:3000/acts.json
+
+# Ricerca
+# METHOD: GET oppure POST
+# URL: http://localhost:3000/search.json
+# params: p=keyword
+#> curl -c cookies.txt -b cookies.txt -X GET -H "Content-Type: application/json" 'http://localhost:3000/search.json?p=sport'
+

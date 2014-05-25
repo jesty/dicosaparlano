@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uri:</strong>
+  <%= @document.uri %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @document.date %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @document.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @document.body %>
+</p>
+
+<p>
+  <strong>Meta title:</strong>
+  <%= @document.meta_title %>
+</p>
+
+<p>
+  <strong>Meta desc:</strong>
+  <%= @document.meta_desc %>
+</p>
+
+<p>
+  <strong>Meta keywords:</strong>
+  <%= @document.meta_keywords %>
+</p>
+
+<%= link_to 'Edit', edit_document_path(@document) %> |
+<%= link_to 'Back', documents_path %>

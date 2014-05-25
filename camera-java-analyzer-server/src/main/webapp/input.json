@@ -1,0 +1,66 @@
+{
+ "nodes":[
+	{
+	"group":0,
+	"id": "Matteo Renzi",
+	"nome": "Matteo",
+	"cognome": "Renzi",
+	},{
+	"group":0,
+	"id": "Ignazio La Russa",
+	"nome": "Ignazio",
+	"cognome": "La Russa",
+	},{
+	"group":0,
+	"id": "Francesca La Marca",
+	"nome": "Francesca",
+	"cognome": "La Marca",
+	},{
+	"group":0,
+	"id": "Lara Ricciati",
+	"nome": "Lara",
+	"cognome": "Ricciati",
+	},{
+	"group":1,
+	"id": "CT",
+	"nome": "CATANIA",
+	"cognome": "AAA",
+	"professione": null
+},{
+	"group":0,
+	"id": "adadsa",
+	"nome": "BBB",
+	"cognome": "AAA",
+	"genere": null,
+	"anagrafe": {
+		"id": 0,
+		"data": null,
+		"luogoDiNascita": {
+			"id": null,
+			"latitudine": 0.0,
+			"regione": null,
+			"citta": "Salerno",
+			"nazione": null,
+			"longitude": 0.0
+		}
+	},
+	"titoloDiStudio": null,
+	"collegio": null,
+	"dataElezione": null,
+	"professione": null
+},{
+	"group":0,
+	"id": "adadsa",
+	"nome": "BBB",
+	"cognome": "AAA",
+	}
+],
+ "links":[
+    {"source":1,"target":0,"value":1},
+    {"source":1,"target":0,"value":5},
+    {"source":1,"target":2,"value":10},
+    {"source":0,"target":0,"value":50}
+	]
+
+
+}

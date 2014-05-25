@@ -1,0 +1,39 @@
+<h1>Listing documents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Uri</th>
+      <th>Date</th>
+      <th>Title</th>
+      <th>Body</th>
+      <th>Meta title</th>
+      <th>Meta desc</th>
+      <th>Meta keywords</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @documents.each do |document| %>
+      <tr>
+        <td><%= document.uri %></td>
+        <td><%= document.date %></td>
+        <td><%= document.title %></td>
+        <td><%= document.body %></td>
+        <td><%= document.meta_title %></td>
+        <td><%= document.meta_desc %></td>
+        <td><%= document.meta_keywords %></td>
+        <td><%= link_to 'Show', document %></td>
+        <td><%= link_to 'Edit', edit_document_path(document) %></td>
+        <td><%= link_to 'Destroy', document, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Document', new_document_path %>

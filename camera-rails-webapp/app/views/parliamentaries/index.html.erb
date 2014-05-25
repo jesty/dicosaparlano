@@ -1,0 +1,43 @@
+<h1>Listing parliamentaries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Uri</th>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Birthday</th>
+      <th>Birthcountry</th>
+      <th>Electionday</th>
+      <th>Board</th>
+      <th>Gender</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @parliamentaries.each do |parliamentary| %>
+      <tr>
+        <td><%= parliamentary.uri %></td>
+        <td><%= parliamentary.name %></td>
+        <td><%= parliamentary.surname %></td>
+        <td><%= parliamentary.birthday %></td>
+        <td><%= parliamentary.birthcountry %></td>
+        <td><%= parliamentary.electionday %></td>
+        <td><%= parliamentary.board %></td>
+        <td><%= parliamentary.gender %></td>
+        <td><%= parliamentary.description %></td>
+        <td><%= link_to 'Show', parliamentary %></td>
+        <td><%= link_to 'Edit', edit_parliamentary_path(parliamentary) %></td>
+        <td><%= link_to 'Destroy', parliamentary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Parliamentary', new_parliamentary_path %>

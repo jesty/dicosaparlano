@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="it">
+    <head>
+        <title>Di Cosa Parlano v 0.1.0</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/animations.css">
+        
+        
+        <style>
+            body {
+                padding-top: 230px;
+            }
+        </style>
+        
+    </head>
+
+    <body ng-app="testUIApp">
+        <div class="container" ng-controller="searchController">
+
+            <div class="navbar navbar-default navbar-fixed-top">
+                
+                <div class="row" >
+                    <div class="col-lg-6 center-block" style="width: 80%">
+                        <h1><small>Di cosa</small> parlano? </h1>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="searchInputItem" ng-model="searchInputItem" placeholder="Inserisci un tema come giustizia, lavoro o il nome di un parlamentare come Matteo Renzi..." typeahead="searchInputItem as searchInputItem.name for searchInputItem in searchInputItems | filter:{name:$viewValue} | limitTo:18" >
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" ng-click="addSearchTopics()">Aggiugni argomento</button>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <hr/>
+
+                <div class="row" >
+                    <div class="col-sx-12 center-block" style="width: 80%; height: 50px">
+                        <a ng-repeat="searchedInputItem in searchedInputItems" ng-bind="searchedInputItem.name" href="#" class="badge" style="padding:10px;"></a>
+                        <div class="pull-right">
+                            <button class="btn btn-default" type="button" ng-click="clearSearchedInputItems()">Elimina Argomenti</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+
+            <div class="row animate-hide" id="searchresult" ng-show="isShowSearchResult">
+                <div ng-repeat="politicalsDetail in politicalsDetails" class="col-sm-6 col-md-4" style="height:350px">
+                    <div class="thumbnail" ng-click="showDetails(politicalsDetail.id);">
+                        <img src="{{politicalsDetail.thumbnail}}" alt="...">
+                        <div class="caption">
+                            <h3>{{politicalsDetail.nome}} {{politicalsDetail.cognome}}</h3>
+                            <p>{{politicalsDetail.categories}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row animate-hide" id="searchresult" ng-show="isShowDetails">
+                
+            </div>
+            <div class="well" style = "background: rgba(189, 189, 189, 0.2);" ng-show="isShowDetails">
+                <div class="row">
+
+                    <div class="col-sm-3">
+                        
+                        <img src="http://static.leonardo.it/wp-content/uploads/sites/12/2013/12/renzi.jpg" alt="renzi"  style="width:100%">
+                       
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="caption">				
+                            <h1>{{singlePoliticalDetails.nome}} {{singlePoliticalDetails.cognome}}</h1>
+                            <h4> Data di nascita:</h4> {{singlePoliticalDetails.dataElezione}}
+                            <h4> Luogo di nascita:</h4> <a href="#"> Firenze </a>
+                            <h4> Legislature</h4> 2014 to actual
+                        </div>
+                    </div>
+                  
+                    
+                 
+                </div>
+
+                <!-- Riga che contiene i tre div "Luoghi" "Categorie" e "Articoli" -->
+                <div class="row">
+                    <br>
+
+                    <!-- Colonna contenente le CATEGORIE-->
+                    <div id = "categorie" class="col-md-4">
+                        <div class="panel panel-default" style =" height : 15em;">
+                            <div class="panel-heading" style="background: rgba(250, 0, 0, 0.5); font-weight: bolder; color: white;">Categorie</div>
+                            <div class="panel-body" id = "content_cat" style="overflow: hidden !important; width: auto !important; height: 12em !important;"><!--overflow : auto;" >
+                                    <div id = "content_cat" style="overflow: hidden !important; width: auto !important; height: 150px !important;"> --> 
+                                - <a href="#" style="cursor:default"> Lavoro <br> </a>
+                                - <a href="#" style="cursor:default">  Salute <br></a>
+                                - <a href="#" style="cursor:default">  Economia <br></a>
+                                - <a href="#" style="cursor:default">  Giovani <br></a>
+                                - <a href="#" style="cursor:default">  Economia <br></a>
+                                - <a href="#" style="cursor:default">  Giovani <br></a>
+                                - <a href="#" style="cursor:default">  Economia <br></a>
+                                - <a href="#" style="cursor:default">  Giovani <br></a>
+                                - <a href="#" style="cursor:default">  Giovani <br></a>
+                                - <a href="#" style="cursor:default">  Economia <br></a>
+                                - <a href="#" style="cursor:default">  Giovani <br></a>
+                                <!-- </div> -->
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Colonna contenente i LUOGHI-->
+                    <div id = "luoghi" class="col-md-4">
+                        <div class="panel panel-default"  style =" height : 15em;">
+                            <div class="panel-heading" style="background: rgba(1, 147, 154, 0.5); font-weight: bolder; color: white;">Luoghi</div>
+                            <div class="panel-body" id = "content_loc" style="overflow: hidden !important; width: auto !important; height: 12em !important;" >
+                                - <a href="#" style="cursor:default">  Firenze <br> </a>
+                                - <a href="#" style="cursor:default">  Roma <br>		</a>	
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Colonna contenente gli ARTICOLI-->
+                    <div id = "articoli" class="col-md-4">
+                        <div class="panel panel-default"  style =" height : 15em;">
+                            <div class="panel-heading" style="background: rgba(136, 179, 45, 0.6); font-weight: bolder; color: white;">Articoli</div>
+                            <div class="panel-body" id = "content_art" style="overflow: hidden !important; width: auto !important; height: 12em !important;">
+                                - <a href="#" style="cursor:default">  Titolo Articolo 1 <br> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- elenco degli script -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./js/scrollBarScript.js"></script>
+        <script type="text/javascript" src="./js/jquery.slimscroll.js"></script>
+
+        <script type="text/javascript" >
+            $(document).ready(function() {
+
+                initScrollbar("content_cat");
+                initScrollbar("content_loc");
+                initScrollbar("content_art");
+
+            });
+        </script>
+        
+        <script src="./js/angular.min.js"></script>
+        <script src="./js/ui-bootstrap-tpls-0.11.0.js"></script>
+        <script src="./js/app.js"></script>
+    </body>
+</html>

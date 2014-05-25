@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/bsidetoday_bsidetodaysvn/!svn/ver/99/sarabanda/src/main/java/eu/kostia/textanalysis/search
+END
+State.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/bsidetoday_bsidetodaysvn/!svn/ver/99/sarabanda/src/main/java/eu/kostia/textanalysis/search/State.java
+END
+Matchable.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/bsidetoday_bsidetodaysvn/!svn/ver/77/sarabanda/src/main/java/eu/kostia/textanalysis/search/Matchable.java
+END
+AhoCorasick.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/bsidetoday_bsidetodaysvn/!svn/ver/77/sarabanda/src/main/java/eu/kostia/textanalysis/search/AhoCorasick.java
+END
+MatchableString.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/bsidetoday_bsidetodaysvn/!svn/ver/77/sarabanda/src/main/java/eu/kostia/textanalysis/search/MatchableString.java
+END
+MatchResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/bsidetoday_bsidetodaysvn/!svn/ver/69/sarabanda/src/main/java/eu/kostia/textanalysis/search/MatchResult.java
+END
+AhoCorasickString.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/bsidetoday_bsidetodaysvn/!svn/ver/77/sarabanda/src/main/java/eu/kostia/textanalysis/search/AhoCorasickString.java
+END

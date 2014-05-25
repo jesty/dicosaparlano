@@ -1,0 +1,20 @@
+package eu.kostia.textanalysis.search;
+
+import java.io.Serializable;
+
+/**
+ * Interface for objects whose string representation is to be matched.
+ * 
+ * @author c.cerbo
+ * 
+ */
+public interface Matchable extends Serializable {
+	/**
+	 * Returns a pattern that represents the object and will be used for the
+	 * string matching.
+	 * 
+	 * @return The string representation to be used for the matching.
+	 */
+	public String pattern();
+	
+}

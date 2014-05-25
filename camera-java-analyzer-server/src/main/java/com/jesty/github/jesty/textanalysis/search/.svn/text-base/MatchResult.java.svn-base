@@ -1,0 +1,27 @@
+package eu.kostia.textanalysis.search;
+
+public interface MatchResult<T> {
+	/**
+	 * Returns the start index of the match.
+	 * 
+	 * @return The index of the first character matched
+	 * 
+	 */
+	public int start();
+
+	/**
+	 * Returns the offset after the last character matched. </p>
+	 * 
+	 * @return @return The offset after the last character matched
+	 * 
+	 */
+	public int end();
+
+	/**
+	 * Returns The match result.
+	 * 
+	 * @return The match result
+	 */
+	public T value();
+
+}

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en" ng-app>
+    <head>
+        <title>Dettaglio Parlamentare</title>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+        <!-- Optional theme-->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+        <!--<script type="text/javascript" src="//api-public.addthis.com/url/shares.json?url=http%3A%2F%2Frocha.la%2FjQuery-slimScroll&amp;callback=_ate.cbs.sc_httprochalajqueryslimscroll0"></script>
+        -->
+        <script type="text/javascript" src="js/scrollBarScript.js"></script>
+        <script type="text/javascript" src="js/jquery.slimscroll.js"></script>
+
+        <style>
+            body {
+                padding-top: 60px;
+            }
+        </style>
+        <script type="text/javascript" >
+            $(document).ready(function() {
+
+                initScrollbar("content_cat");
+                initScrollbar("content_loc");
+                initScrollbar("content_art");
+
+            })
+
+
+        </script>
+    </head>
+    <body style="overflow : hidden;">
+        <div class="container">
+            <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" style="cursor:default;">Di cosa parlano?</a>
+                    </div>
+                    <div class="navbar-collapse collapse" style="height: 1px;">
+                        <form class="navbar-form navbar-right" style="width: 30%;">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Es. giustizia lazio Polverini..." style="width: 100%;">
+                                <span class="input-group-addon btn btn-default" >Cerca</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <a ng-repeat="topic in topics" ng-bind="topic" href="#" class="badge" style="padding:10px;"></a>
+
+                </div>
+            </div>
+            <hr/>
+            <div class="well" style = "background: rgba(189, 189, 189, 0.2);">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12">
+                        <div id="img_container" class="pull-left">
+                            <img src="renzi.jpg" alt="renzi" height="200" width="300" >
+                        </div>                      
+                        <div class="caption" style ="margin-left : 30%;">				
+                            <h1>Matteo Renzi</h1>
+                            <h4> Data di nascita:</h4> 11/01/1975
+                            <h4> Luogo di nascita:</h4> <a href="#"> Firenze </a>
+                            <h4> Legislature</h4> 2014 to actual
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Riga che contiene i tre div "Luoghi" "Categorie" e "Articoli" -->
+                <div class="row">
+                    <br>
+
+                    <!-- Colonna contenente le CATEGORIE-->
+                    <div id = "categorie" class="col-md-4">
+                        <div class="panel panel-default" style =" height : 15em;">
+                            <div class="panel-heading" style="background: rgba(250, 0, 0, 0.5); font-weight: bolder; color: white;">Categorie</div>
+                            <div class="panel-body" id = "content_cat" style="overflow: hidden !important; width: auto !important; height: 12em !important;"><!--overflow : auto;" >
+                                    <div id = "content_cat" style="overflow: hidden !important; width: auto !important; height: 150px !important;"> --> 
+                                - <a href"#" style="cursor:default"> Lavoro <br> </a>
+                                - <a href"#" style="cursor:default">  Salute <br></a>
+                                - <a href"#" style="cursor:default">  Economia <br></a>
+                                - <a href"#" style="cursor:default">  Giovani <br></a>
+                                - <a href"#" style="cursor:default">  Economia <br></a>
+                                - <a href"#" style="cursor:default">  Giovani <br></a>
+                                - <a href"#" style="cursor:default">  Economia <br></a>
+                                - <a href"#" style="cursor:default">  Giovani <br></a>
+                                - <a href"#" style="cursor:default">  Giovani <br></a>
+                                - <a href"#" style="cursor:default">  Economia <br></a>
+                                - <a href"#" style="cursor:default">  Giovani <br></a>
+                                <!-- </div> -->
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Colonna contenente i LUOGHI-->
+                    <div id = "luoghi" class="col-md-4">
+                        <div class="panel panel-default"  style =" height : 15em;">
+                            <div class="panel-heading" style="background: rgba(1, 147, 154, 0.5); font-weight: bolder; color: white;">Luoghi</div>
+                            <div class="panel-body" id = "content_loc" style="overflow: hidden !important; width: auto !important; height: 12em !important;" >
+                                - <a href"#" style="cursor:default">  Firenze <br> </a>
+                                - <a href"#" style="cursor:default">  Roma <br>		</a>	
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Colonna contenente gli ARTICOLI-->
+                    <div id = "articoli" class="col-md-4">
+                        <div class="panel panel-default"  style =" height : 15em;">
+                            <div class="panel-heading" style="background: rgba(136, 179, 45, 0.6); font-weight: bolder; color: white;">Articoli</div>
+                            <div class="panel-body" id = "content_art" style="overflow: hidden !important; width: auto !important; height: 12em !important;">
+                                - <a href"#" style="cursor:default">  Titolo Articolo 1 <br> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
