@@ -2,14 +2,14 @@
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="DiCosaParlano">
 	   <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-	    <class>com.dicosa.entities.Parlamentare</class>
-	   	<class>com.dicosa.entities.Anagrafe</class>
-	   	<class>com.dicosa.entities.Luogo</class>
-	   	<class>com.dicosa.entities.Documento</class>
-	   	<class>com.dicosa.entities.TitoloDiStudio</class>
-	   	<class>com.dicosa.entities.Articolo</class>
-	   	<class>com.dicosa.entities.Categoria</class>
-	   	<class>com.dicosa.entities.PropostaDiLegge</class>
+	    <class>com.github.jesty.camera.entities.Parlamentare</class>
+	   	<class>com.github.jesty.camera.entities.Anagrafe</class>
+	   	<class>com.github.jesty.camera.entities.Luogo</class>
+	   	<class>com.github.jesty.camera.entities.Documento</class>
+	   	<class>com.github.jesty.camera.entities.TitoloDiStudio</class>
+	   	<class>com.github.jesty.camera.entities.Articolo</class>
+	   	<class>com.github.jesty.camera.entities.Categoria</class>
+	   	<class>com.github.jesty.camera.entities.PropostaDiLegge</class>
 	   	<properties>
 <!-- 		   <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" /> -->
 <!-- 		   <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/camera" /> -->

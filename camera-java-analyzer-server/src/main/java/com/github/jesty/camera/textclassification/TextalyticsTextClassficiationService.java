@@ -28,7 +28,7 @@ public class TextalyticsTextClassficiationService implements TextClassificationS
 	    HttpPost post = new HttpPost("https://textalytics.com/core/class-1.1");
 	    try {
 	      List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(1);
-	      nameValuePairs.add(new BasicNameValuePair("key", "9a6925876cdd73f9b8c0e87ca4c11162"));
+	      nameValuePairs.add(new BasicNameValuePair("key", "API_KEY"));
 	      nameValuePairs.add(new BasicNameValuePair("of", "json"));
 	      nameValuePairs.add(new BasicNameValuePair("model", "IPTC_it"));
 	      nameValuePairs.add(new BasicNameValuePair(ContextConstants.TXT, currentDocumento.getText()));
